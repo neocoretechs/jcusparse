@@ -788,7 +788,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrsv2InfoNa
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCreateCsrsv2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrsv2Info_t info_native;
 
@@ -804,6 +804,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrsv2InfoNa
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsv2InfoNative(JNIEnv *env, jclass cls, jobject info)
@@ -818,7 +820,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsv2InfoN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDestroyCsrsv2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrsv2Info_t info_native;
 
@@ -834,6 +836,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsv2InfoN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsric02InfoNative(JNIEnv *env, jclass cls, jobject info)
@@ -1413,7 +1417,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSaxpyiNative(JNIEn
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSaxpyi(handle=%p, nnz=%d, alpha=%p, xVal=%p, xInd=%p, y=%p, idxBase=%d)\n",
         handle, nnz, alpha, xVal, xInd, y, idxBase);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int nnz_native = 0;
@@ -1452,6 +1456,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSaxpyiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDaxpyiNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject alpha, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -1511,7 +1517,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDaxpyiNative(JNIEn
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (double *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDaxpyi(handle_native, nnz_native, alpha_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -1527,6 +1533,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDaxpyiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCaxpyiNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject alpha, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -1586,7 +1594,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCaxpyiNative(JNIEn
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (cuComplex *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseCaxpyi(handle_native, nnz_native, alpha_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -1602,6 +1610,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCaxpyiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZaxpyiNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject alpha, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -1661,7 +1671,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZaxpyiNative(JNIEn
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (cuDoubleComplex *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseZaxpyi(handle_native, nnz_native, alpha_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -1677,6 +1687,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZaxpyiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1724,7 +1736,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrNative(JNIEnv
     xVal_native = (float *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseSgthr(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -1739,6 +1751,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1786,7 +1799,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrNative(JNIEnv
     xVal_native = (double *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDgthr(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -1801,6 +1814,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1848,7 +1863,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrNative(JNIEnv
     xVal_native = (cuComplex *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseCgthr(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -1863,6 +1878,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1910,7 +1927,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrNative(JNIEnv
     xVal_native = (cuDoubleComplex *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseZgthr(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -1925,6 +1942,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrzNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1972,7 +1990,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrzNative(JNIEn
     xVal_native = (float *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseSgthrz(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -1987,6 +2005,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrzNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrzNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -2034,7 +2054,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrzNative(JNIEn
     xVal_native = (double *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDgthrz(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -2049,6 +2069,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrzNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrzNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -2096,7 +2118,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrzNative(JNIEn
     xVal_native = (cuComplex *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseCgthrz(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -2111,6 +2133,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgthrzNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrzNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -2158,7 +2182,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrzNative(JNIEn
     xVal_native = (cuDoubleComplex *)getPointer(env, xVal);
     xInd_native = (int *)getPointer(env, xInd);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseZgthrz(handle_native, nnz_native, y_native, xVal_native, xInd_native, idxBase_native);
 
@@ -2173,6 +2197,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrzNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSsctrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -2220,7 +2245,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSsctrNative(JNIEnv
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (float *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseSsctr(handle_native, nnz_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -2235,6 +2260,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSsctrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDsctrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -2282,7 +2309,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDsctrNative(JNIEnv
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (double *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDsctr(handle_native, nnz_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -2297,6 +2324,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDsctrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsctrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -2344,7 +2373,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsctrNative(JNIEnv
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (cuComplex *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseCsctr(handle_native, nnz_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -2359,6 +2388,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsctrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZsctrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jint idxBase)
@@ -2406,7 +2437,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZsctrNative(JNIEnv
     xInd_native = (int *)getPointer(env, xInd);
     y_native = (cuDoubleComplex *)getPointer(env, y);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseZsctr(handle_native, nnz_native, xVal_native, xInd_native, y_native, idxBase_native);
 
@@ -2421,6 +2452,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZsctrNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSrotiNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jobject c, jobject s, jint idxBase)
@@ -2482,7 +2515,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSrotiNative(JNIEnv
     c_native = (float *)getPointer(env, c);
     s_native = (float *)getPointer(env, s);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseSroti(handle_native, nnz_native, xVal_native, xInd_native, y_native, c_native, s_native, idxBase_native);
 
@@ -2499,6 +2532,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSrotiNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDrotiNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jobject c, jobject s, jint idxBase)
@@ -2560,7 +2595,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDrotiNative(JNIEnv
     c_native = (double *)getPointer(env, c);
     s_native = (double *)getPointer(env, s);
     idxBase_native = (cusparseIndexBase_t)idxBase;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDroti(handle_native, nnz_native, xVal_native, xInd_native, y_native, c_native, s_native, idxBase_native);
 
@@ -2577,6 +2612,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDrotiNative(JNIEnv
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 //##############################################################################
@@ -3346,7 +3383,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrmvEx_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCsrmvEx_bufferSize(handle=%p, alg=%d, transA=%d, m=%d, n=%d, nnz=%d, alpha=%p, alphatype=%d, descrA=%p, csrValA=%p, csrValAtype=%d, csrRowPtrA=%p, csrColIndA=%p, x=%p, xtype=%d, beta=%p, betatype=%d, y=%p, ytype=%d, executiontype=%d, bufferSizeInBytes=%p)\n",
         handle, alg, transA, m, n, nnz, alpha, alphatype, descrA, csrValA, csrValAtype, csrRowPtrA, csrColIndA, x, xtype, beta, betatype, y, ytype, executiontype, bufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseAlgMode_t alg_native;
@@ -3432,6 +3469,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrmvEx_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrmvExNative(JNIEnv *env, jclass cls, jobject handle, jint alg, jint transA, jint m, jint n, jint nnz, jobject alpha, jint alphatype, jobject descrA, jobject csrValA, jint csrValAtype, jobject csrRowPtrA, jobject csrColIndA, jobject x, jint xtype, jobject beta, jint betatype, jobject y, jint ytype, jint executiontype, jobject buffer)
@@ -3502,7 +3541,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrmvExNative(JNIE
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCsrmvEx(handle=%p, alg=%d, transA=%d, m=%d, n=%d, nnz=%d, alpha=%p, alphatype=%d, descrA=%p, csrValA=%p, csrValAtype=%d, csrRowPtrA=%p, csrColIndA=%p, x=%p, xtype=%d, beta=%p, betatype=%d, y=%p, ytype=%d, executiontype=%d, buffer=%p)\n",
         handle, alg, transA, m, n, nnz, alpha, alphatype, descrA, csrValA, csrValAtype, csrRowPtrA, csrColIndA, x, xtype, beta, betatype, y, ytype, executiontype, buffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseAlgMode_t alg_native;
@@ -3588,6 +3627,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrmvExNative(JNIE
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSbsrmvNative(JNIEnv *env, jclass cls, jobject handle, jint dirA, jint transA, jint mb, jint nb, jint nnzb, jobject alpha, jobject descrA, jobject bsrSortedValA, jobject bsrSortedRowPtrA, jobject bsrSortedColIndA, jint blockDim, jobject x, jobject beta, jobject y)
@@ -4716,7 +4757,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrsv2_1zeroPivot
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseXcsrsv2_zeroPivot(handle=%p, info=%p, position=%p)\n",
         handle, info, position);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     csrsv2Info_t info_native;
@@ -4738,6 +4779,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrsv2_1zeroPivot
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jintArray pBufferSizeInBytes)
@@ -4785,7 +4828,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsv2_bufferSize(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -4828,6 +4871,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jintArray pBufferSizeInBytes)
@@ -4875,7 +4920,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsv2_bufferSize(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -4918,6 +4963,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jintArray pBufferSizeInBytes)
@@ -4965,7 +5012,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsv2_bufferSize(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5008,6 +5055,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jintArray pBufferSizeInBytes)
@@ -5055,7 +5104,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsv2_bufferSize(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5098,6 +5147,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jint policy, jobject pBuffer)
@@ -5146,7 +5197,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsv2_analysis(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5192,6 +5243,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jint policy, jobject pBuffer)
@@ -5240,7 +5293,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsv2_analysis(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5286,6 +5339,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jint policy, jobject pBuffer)
@@ -5334,7 +5389,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsv2_analysis(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5380,6 +5435,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jint policy, jobject pBuffer)
@@ -5428,7 +5485,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsv2_analysis(handle=%p, transA=%d, m=%d, nnz=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5474,6 +5531,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jobject f, jobject x, jint policy, jobject pBuffer)
@@ -5537,7 +5596,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsv2_solve(handle=%p, transA=%d, m=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, f=%p, x=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, f, x, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5597,6 +5656,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsv2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jobject f, jobject x, jint policy, jobject pBuffer)
@@ -5660,7 +5721,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsv2_solve(handle=%p, transA=%d, m=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, f=%p, x=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, f, x, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5720,6 +5781,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsv2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jobject f, jobject x, jint policy, jobject pBuffer)
@@ -5783,7 +5846,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsv2_solve(handle=%p, transA=%d, m=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, f=%p, x=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, f, x, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5843,6 +5906,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsv2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint transA, jint m, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject info, jobject f, jobject x, jint policy, jobject pBuffer)
@@ -5906,7 +5971,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsv2_solve(handle=%p, transA=%d, m=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, info=%p, f=%p, x=%p, policy=%d, pBuffer=%p)\n",
         handle, transA, m, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, info, f, x, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t transA_native;
@@ -5966,6 +6031,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsv2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXbsrsv2_1zeroPivotNative(JNIEnv *env, jclass cls, jobject handle, jobject info, jobject position)
@@ -8012,7 +8079,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgemmiNative(JNIEn
     beta_native = (float *)beta_pointerData->getPointer(env);
     C_native = (float *)getPointer(env, C);
     ldc_native = (int)ldc;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseSgemmi(handle_native, m_native, n_native, k_native, nnz_native, alpha_native, A_native, lda_native, cscValB_native, cscColPtrB_native, cscRowIndB_native, beta_native, C_native, ldc_native);
 
@@ -8035,6 +8102,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgemmiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgemmiNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jint nnz, jobject alpha, jobject A, jint lda, jobject cscValB, jobject cscColPtrB, jobject cscRowIndB, jobject beta, jobject C, jint ldc)
@@ -8132,7 +8201,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgemmiNative(JNIEn
     beta_native = (double *)beta_pointerData->getPointer(env);
     C_native = (double *)getPointer(env, C);
     ldc_native = (int)ldc;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseDgemmi(handle_native, m_native, n_native, k_native, nnz_native, alpha_native, A_native, lda_native, cscValB_native, cscColPtrB_native, cscRowIndB_native, beta_native, C_native, ldc_native);
 
@@ -8155,6 +8224,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgemmiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgemmiNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jint nnz, jobject alpha, jobject A, jint lda, jobject cscValB, jobject cscColPtrB, jobject cscRowIndB, jobject beta, jobject C, jint ldc)
@@ -8252,7 +8323,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgemmiNative(JNIEn
     beta_native = (cuComplex *)beta_pointerData->getPointer(env);
     C_native = (cuComplex *)getPointer(env, C);
     ldc_native = (int)ldc;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseCgemmi(handle_native, m_native, n_native, k_native, nnz_native, alpha_native, A_native, lda_native, cscValB_native, cscColPtrB_native, cscRowIndB_native, beta_native, C_native, ldc_native);
 
@@ -8275,6 +8346,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCgemmiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgemmiNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jint nnz, jobject alpha, jobject A, jint lda, jobject cscValB, jobject cscColPtrB, jobject cscRowIndB, jobject beta, jobject C, jint ldc)
@@ -8372,7 +8445,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgemmiNative(JNIEn
     beta_native = (cuDoubleComplex *)beta_pointerData->getPointer(env);
     C_native = (cuDoubleComplex *)getPointer(env, C);
     ldc_native = (int)ldc;
-
+    /*
     // Native function call
     cusparseStatus_t jniResult_native = cusparseZgemmi(handle_native, m_native, n_native, k_native, nnz_native, alpha_native, A_native, lda_native, cscValB_native, cscColPtrB_native, cscRowIndB_native, beta_native, C_native, ldc_native);
 
@@ -8395,6 +8468,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgemmiNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrsm2InfoNative(JNIEnv *env, jclass cls, jobject info)
@@ -8409,7 +8484,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrsm2InfoNa
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCreateCsrsm2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrsm2Info_t info_native;
 
@@ -8425,6 +8500,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrsm2InfoNa
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsm2InfoNative(JNIEnv *env, jclass cls, jobject info)
@@ -8439,7 +8516,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsm2InfoN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDestroyCsrsm2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrsm2Info_t info_native;
 
@@ -8455,6 +8532,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrsm2InfoN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrsm2_1zeroPivotNative(JNIEnv *env, jclass cls, jobject handle, jobject info, jobject position)
@@ -8479,7 +8558,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrsm2_1zeroPivot
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseXcsrsm2_zeroPivot(handle=%p, info=%p, position=%p)\n",
         handle, info, position);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     csrsm2Info_t info_native;
@@ -8511,6 +8590,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrsm2_1zeroPivot
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jlongArray pBufferSize)
@@ -8573,7 +8654,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsm2_bufferSizeExt(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBufferSize=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBufferSize);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -8642,6 +8723,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jlongArray pBufferSize)
@@ -8704,7 +8787,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsm2_bufferSizeExt(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBufferSize=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBufferSize);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -8773,6 +8856,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jlongArray pBufferSize)
@@ -8835,7 +8920,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsm2_bufferSizeExt(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBufferSize=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBufferSize);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -8904,6 +8989,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jlongArray pBufferSize)
@@ -8966,7 +9053,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1bufferSiz
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsm2_bufferSizeExt(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBufferSize=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBufferSize);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9035,6 +9122,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1bufferSiz
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9097,7 +9186,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsm2_analysis(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9166,6 +9255,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9228,7 +9319,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsm2_analysis(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9297,6 +9388,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9359,7 +9452,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsm2_analysis(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9428,6 +9521,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1analysisNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9490,7 +9585,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1analysisN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsm2_analysis(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9559,6 +9654,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1analysisN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9621,7 +9718,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrsm2_solve(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9690,6 +9787,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrsm2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9752,7 +9851,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrsm2_solve(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9821,6 +9920,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrsm2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -9883,7 +9984,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrsm2_solve(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -9952,6 +10053,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrsm2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1solveNative(JNIEnv *env, jclass cls, jobject handle, jint algo, jint transA, jint transB, jint m, jint nrhs, jint nnz, jobject alpha, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject B, jint ldb, jobject info, jint policy, jobject pBuffer)
@@ -10014,7 +10117,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1solveNati
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrsm2_solve(handle=%p, algo=%d, transA=%d, transB=%d, m=%d, nrhs=%d, nnz=%d, alpha=%p, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, B=%p, ldb=%d, info=%p, policy=%d, pBuffer=%p)\n",
         handle, algo, transA, transB, m, nrhs, nnz, alpha, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, B, ldb, info, policy, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int algo_native = 0;
@@ -10083,6 +10186,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrsm2_1solveNati
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXbsrsm2_1zeroPivotNative(JNIEnv *env, jclass cls, jobject handle, jobject info, jobject position)
@@ -20185,7 +20290,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrgemm2Info
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCreateCsrgemm2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrgemm2Info_t info_native;
 
@@ -20201,6 +20306,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCsrgemm2Info
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrgemm2InfoNative(JNIEnv *env, jclass cls, jobject info)
@@ -20215,7 +20322,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrgemm2Inf
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDestroyCsrgemm2Info(info=%p)\n",
         info);
-
+    /*
     // Native variable declarations
     csrgemm2Info_t info_native;
 
@@ -20231,6 +20338,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDestroyCsrgemm2Inf
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject info, jlongArray pBufferSizeInBytes)
@@ -20316,7 +20425,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2_1bufferS
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrgemm2_bufferSizeExt(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedRowPtrD=%p, csrSortedColIndD=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedRowPtrD, csrSortedColIndD, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -20399,6 +20508,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2_1bufferS
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+     return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject info, jlongArray pBufferSizeInBytes)
@@ -20484,7 +20595,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2_1bufferS
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrgemm2_bufferSizeExt(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedRowPtrD=%p, csrSortedColIndD=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedRowPtrD, csrSortedColIndD, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -20567,6 +20678,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2_1bufferS
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject info, jlongArray pBufferSizeInBytes)
@@ -20652,7 +20765,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2_1bufferS
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrgemm2_bufferSizeExt(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedRowPtrD=%p, csrSortedColIndD=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedRowPtrD, csrSortedColIndD, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -20735,6 +20848,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2_1bufferS
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject info, jlongArray pBufferSizeInBytes)
@@ -20820,7 +20935,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2_1bufferS
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrgemm2_bufferSizeExt(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedRowPtrD=%p, csrSortedColIndD=%p, info=%p, pBufferSizeInBytes=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedRowPtrD, csrSortedColIndD, info, pBufferSizeInBytes);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -20903,6 +21018,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2_1bufferS
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrgemm2NnzNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject descrA, jint nnzA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject descrD, jint nnzD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject descrC, jobject csrSortedRowPtrC, jobject nnzTotalDevHostPtr, jobject info, jobject pBuffer)
@@ -20993,7 +21110,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrgemm2NnzNative
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseXcsrgemm2Nnz(handle=%p, m=%d, n=%d, k=%d, descrA=%p, nnzA=%d, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedRowPtrB=%p, csrSortedColIndB=%p, descrD=%p, nnzD=%d, csrSortedRowPtrD=%p, csrSortedColIndD=%p, descrC=%p, csrSortedRowPtrC=%p, nnzTotalDevHostPtr=%p, info=%p, pBuffer=%p)\n",
         handle, m, n, k, descrA, nnzA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedRowPtrB, csrSortedColIndB, descrD, nnzD, csrSortedRowPtrD, csrSortedColIndD, descrC, csrSortedRowPtrC, nnzTotalDevHostPtr, info, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -21079,6 +21196,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcsrgemm2NnzNative
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2Native(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedValB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedValD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject descrC, jobject csrSortedValC, jobject csrSortedRowPtrC, jobject csrSortedColIndC, jobject info, jobject pBuffer)
@@ -21199,7 +21318,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2Native(JN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsrgemm2(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedValB=%p, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedValD=%p, csrSortedRowPtrD=%p, csrSortedColIndD=%p, descrC=%p, csrSortedValC=%p, csrSortedRowPtrC=%p, csrSortedColIndC=%p, info=%p, pBuffer=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedValB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedValD, csrSortedRowPtrD, csrSortedColIndD, descrC, csrSortedValC, csrSortedRowPtrC, csrSortedColIndC, info, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -21303,6 +21422,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgemm2Native(JN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2Native(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedValB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedValD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject descrC, jobject csrSortedValC, jobject csrSortedRowPtrC, jobject csrSortedColIndC, jobject info, jobject pBuffer)
@@ -21423,7 +21544,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2Native(JN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsrgemm2(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedValB=%p, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedValD=%p, csrSortedRowPtrD=%p, csrSortedColIndD=%p, descrC=%p, csrSortedValC=%p, csrSortedRowPtrC=%p, csrSortedColIndC=%p, info=%p, pBuffer=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedValB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedValD, csrSortedRowPtrD, csrSortedColIndD, descrC, csrSortedValC, csrSortedRowPtrC, csrSortedColIndC, info, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -21527,6 +21648,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsrgemm2Native(JN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2Native(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedValB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedValD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject descrC, jobject csrSortedValC, jobject csrSortedRowPtrC, jobject csrSortedColIndC, jobject info, jobject pBuffer)
@@ -21647,7 +21770,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2Native(JN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsrgemm2(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedValB=%p, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedValD=%p, csrSortedRowPtrD=%p, csrSortedColIndD=%p, descrC=%p, csrSortedValC=%p, csrSortedRowPtrC=%p, csrSortedColIndC=%p, info=%p, pBuffer=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedValB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedValD, csrSortedRowPtrD, csrSortedColIndD, descrC, csrSortedValC, csrSortedRowPtrC, csrSortedColIndC, info, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -21751,6 +21874,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsrgemm2Native(JN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2Native(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jint k, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject descrB, jint nnzB, jobject csrSortedValB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject beta, jobject descrD, jint nnzD, jobject csrSortedValD, jobject csrSortedRowPtrD, jobject csrSortedColIndD, jobject descrC, jobject csrSortedValC, jobject csrSortedRowPtrC, jobject csrSortedColIndC, jobject info, jobject pBuffer)
@@ -21871,7 +21996,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2Native(JN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsrgemm2(handle=%p, m=%d, n=%d, k=%d, alpha=%p, descrA=%p, nnzA=%d, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, descrB=%p, nnzB=%d, csrSortedValB=%p, csrSortedRowPtrB=%p, csrSortedColIndB=%p, beta=%p, descrD=%p, nnzD=%d, csrSortedValD=%p, csrSortedRowPtrD=%p, csrSortedColIndD=%p, descrC=%p, csrSortedValC=%p, csrSortedRowPtrC=%p, csrSortedColIndC=%p, info=%p, pBuffer=%p)\n",
         handle, m, n, k, alpha, descrA, nnzA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, descrB, nnzB, csrSortedValB, csrSortedRowPtrB, csrSortedColIndB, beta, descrD, nnzD, csrSortedValD, csrSortedRowPtrD, csrSortedColIndD, descrC, csrSortedValC, csrSortedRowPtrC, csrSortedColIndC, info, pBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -21975,6 +22100,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsrgemm2Native(JN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsrgeam2_1bufferSizeExtNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject alpha, jobject descrA, jint nnzA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject beta, jobject descrB, jint nnzB, jobject csrSortedValB, jobject csrSortedRowPtrB, jobject csrSortedColIndB, jobject descrC, jobject csrSortedValC, jobject csrSortedRowPtrC, jobject csrSortedColIndC, jlongArray pBufferSizeInBytes)
@@ -25135,7 +25262,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSdense2csrNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSdense2csr(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerRow=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerRow, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25178,6 +25305,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSdense2csrNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2csrNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerRow, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA)
@@ -25225,7 +25354,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2csrNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDdense2csr(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerRow=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerRow, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25268,6 +25397,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2csrNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2csrNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerRow, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA)
@@ -25315,7 +25446,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2csrNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCdense2csr(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerRow=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerRow, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25358,6 +25489,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2csrNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2csrNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerRow, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA)
@@ -25405,7 +25538,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2csrNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZdense2csr(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerRow=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerRow, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25448,6 +25581,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2csrNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsr2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject A, jint lda)
@@ -25490,7 +25625,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsr2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsr2dense(handle=%p, m=%d, n=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25530,6 +25665,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsr2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsr2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject A, jint lda)
@@ -25572,7 +25709,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsr2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsr2dense(handle=%p, m=%d, n=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25612,6 +25749,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsr2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsr2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject A, jint lda)
@@ -25654,7 +25793,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsr2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsr2dense(handle=%p, m=%d, n=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25694,6 +25833,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsr2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsr2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject csrSortedValA, jobject csrSortedRowPtrA, jobject csrSortedColIndA, jobject A, jint lda)
@@ -25736,7 +25877,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsr2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsr2dense(handle=%p, m=%d, n=%d, descrA=%p, csrSortedValA=%p, csrSortedRowPtrA=%p, csrSortedColIndA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, csrSortedValA, csrSortedRowPtrA, csrSortedColIndA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25776,6 +25917,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsr2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSdense2cscNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerCol, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA)
@@ -25823,7 +25966,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSdense2cscNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSdense2csc(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerCol=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerCol, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25866,6 +26009,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSdense2cscNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2cscNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerCol, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA)
@@ -25913,7 +26058,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2cscNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDdense2csc(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerCol=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerCol, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -25956,6 +26101,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDdense2cscNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2cscNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerCol, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA)
@@ -26003,7 +26150,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2cscNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCdense2csc(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerCol=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerCol, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26046,6 +26193,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCdense2cscNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2cscNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject A, jint lda, jobject nnzPerCol, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA)
@@ -26093,7 +26242,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2cscNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZdense2csc(handle=%p, m=%d, n=%d, descrA=%p, A=%p, lda=%d, nnzPerCol=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p)\n",
         handle, m, n, descrA, A, lda, nnzPerCol, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26136,6 +26285,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZdense2cscNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsc2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA, jobject A, jint lda)
@@ -26178,7 +26329,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsc2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseScsc2dense(handle=%p, m=%d, n=%d, descrA=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26218,6 +26369,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseScsc2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsc2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA, jobject A, jint lda)
@@ -26260,7 +26413,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsc2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseDcsc2dense(handle=%p, m=%d, n=%d, descrA=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26300,6 +26453,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDcsc2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsc2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA, jobject A, jint lda)
@@ -26342,7 +26497,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsc2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCcsc2dense(handle=%p, m=%d, n=%d, descrA=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26382,6 +26537,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCcsc2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsc2denseNative(JNIEnv *env, jclass cls, jobject handle, jint m, jint n, jobject descrA, jobject cscSortedValA, jobject cscSortedRowIndA, jobject cscSortedColPtrA, jobject A, jint lda)
@@ -26424,7 +26581,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsc2denseNative(J
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseZcsc2dense(handle=%p, m=%d, n=%d, descrA=%p, cscSortedValA=%p, cscSortedRowIndA=%p, cscSortedColPtrA=%p, A=%p, lda=%d)\n",
         handle, m, n, descrA, cscSortedValA, cscSortedRowIndA, cscSortedColPtrA, A, lda);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     int m_native = 0;
@@ -26464,6 +26621,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZcsc2denseNative(J
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseXcoo2csrNative(JNIEnv *env, jclass cls, jobject handle, jobject cooRowInd, jint nnz, jint m, jobject csrSortedRowPtr, jint idxBase)
@@ -36137,7 +36296,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMatSetStridedBat
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSpMatSetStridedBatch(spMatDescr=%p, batchCount=%d)\n",
         spMatDescr, batchCount);
-
+    /*
     // Native variable declarations
     cusparseSpMatDescr_t spMatDescr_native;
     int batchCount_native = 0;
@@ -36156,6 +36315,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMatSetStridedBat
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMatGetStridedBatchNative(JNIEnv *env, jclass cls, jobject spMatDescr, jintArray batchCount)
@@ -36694,7 +36855,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCscGetNative(JNIEn
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCscGet(spMatDescr=%p, rows=%p, cols=%p, nnz=%p, cscColOffsets=%p, cscRowInd=%p, cscValues=%p, cscColOffsetsType=%p, cscRowIndType=%p, idxBase=%p, valueType=%p)\n",
         spMatDescr, rows, cols, nnz, cscColOffsets, cscRowInd, cscValues, cscColOffsetsType, cscRowIndType, idxBase, valueType);
-
+    /*
     // Native variable declarations
     cusparseSpMatDescr_t spMatDescr_native;
     int64_t rows_native;
@@ -36740,6 +36901,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCscGetNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+        return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCsrSetPointersNative(JNIEnv *env, jclass cls, jobject spMatDescr, jobject csrRowOffsets, jobject csrColInd, jobject csrValues)
@@ -36958,7 +37121,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCooAoSNative
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCreateCooAoS(spMatDescr=%p, rows=%ld, cols=%ld, nnz=%ld, cooInd=%p, cooValues=%p, cooIdxType=%d, idxBase=%d, valueType=%d)\n",
         spMatDescr, rows, cols, nnz, cooInd, cooValues, cooIdxType, idxBase, valueType);
-
+    /*
     // Native variable declarations
     cusparseSpMatDescr_t spMatDescr_native;
     int64_t rows_native = 0;
@@ -36998,6 +37161,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCreateCooAoSNative
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCooGetNative(JNIEnv *env, jclass cls, jobject spMatDescr, jlongArray rows, jlongArray cols, jlongArray nnz, jobject cooRowInd, jobject cooColInd, jobject cooValues, jintArray idxType, jintArray idxBase, jintArray valueType)
@@ -37154,7 +37319,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCooAoSGetNative(JN
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseCooAoSGet(spMatDescr=%p, rows=%p, cols=%p, nnz=%p, cooInd=%p, cooValues=%p, idxType=%p, idxBase=%p, valueType=%p)\n",
         spMatDescr, rows, cols, nnz, cooInd, cooValues, idxType, idxBase, valueType);
-
+    /*
     // Native variable declarations
     cusparseSpMatDescr_t spMatDescr_native;
     int64_t rows_native;
@@ -37194,6 +37359,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCooAoSGetNative(JN
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseCooSetPointersNative(JNIEnv *env, jclass cls, jobject spMatDescr, jobject cooRows, jobject cooColumns, jobject cooValues)
@@ -40305,7 +40472,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseConstrainedGeMMNat
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseConstrainedGeMM(handle=%p, opA=%d, opB=%d, alpha=%p, matA=%p, matB=%p, beta=%p, matC=%p, computeType=%d, externalBuffer=%p)\n",
         handle, opA, opB, alpha, matA, matB, beta, matC, computeType, externalBuffer);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t opA_native;
@@ -40358,6 +40525,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseConstrainedGeMMNat
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseConstrainedGeMM_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint opA, jint opB, jobject alpha, jobject matA, jobject matB, jobject beta, jobject matC, jint computeType, jlongArray bufferSize)
@@ -40405,7 +40574,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseConstrainedGeMM_1b
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseConstrainedGeMM_bufferSize(handle=%p, opA=%d, opB=%d, alpha=%p, matA=%p, matB=%p, beta=%p, matC=%p, computeType=%d, bufferSize=%p)\n",
         handle, opA, opB, alpha, matA, matB, beta, matC, computeType, bufferSize);
-
+    /*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseOperation_t opA_native;
@@ -40458,6 +40627,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseConstrainedGeMM_1b
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSDDMM_1bufferSizeNative(JNIEnv *env, jclass cls, jobject handle, jint opA, jint opB, jobject alpha, jobject matA, jobject matB, jobject beta, jobject matC, jint computeType, jint alg, jlongArray bufferSize)
@@ -40823,7 +40994,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOp_1createPlan
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSpMMOp_createPlan(handle=%p, plan=%p, opA=%d, opB=%d, matA=%p, matB=%p, matC=%p, computeType=%d, alg=%d, addOperationNvvmBuffer=%p, addOperationBufferSize=%ld, mulOperationNvvmBuffer=%p, mulOperationBufferSize=%ld, epilogueNvvmBuffer=%p, epilogueBufferSize=%ld, SpMMWorkspaceSize=%p)\n",
         handle, plan, opA, opB, matA, matB, matC, computeType, alg, addOperationNvvmBuffer, addOperationBufferSize, mulOperationNvvmBuffer, mulOperationBufferSize, epilogueNvvmBuffer, epilogueBufferSize, SpMMWorkspaceSize);
-
+/*
     // Native variable declarations
     cusparseHandle_t handle_native;
     cusparseSpMMOpPlan_t * plan_native;
@@ -40884,6 +41055,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOp_1createPlan
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+        return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOpNative(JNIEnv *env, jclass cls, jobject plan, jobject externalBuffer)
@@ -40899,7 +41072,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOpNative(JNIEn
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSpMMOp(plan=%p, externalBuffer=%p)\n",
         plan, externalBuffer);
-
+/*
     // Native variable declarations
     cusparseSpMMOpPlan_t plan_native;
     void * externalBuffer_native = NULL;
@@ -40918,6 +41091,8 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOpNative(JNIEn
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+        return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOp_1destroyPlanNative(JNIEnv *env, jclass cls, jobject plan)
@@ -40932,7 +41107,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOp_1destroyPla
     // Log message
     Logger::log(LOG_TRACE, "Executing cusparseSpMMOp_destroyPlan(plan=%p)\n",
         plan);
-
+/*
     // Native variable declarations
     cusparseSpMMOpPlan_t plan_native;
 
@@ -40948,5 +41123,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSpMMOp_1destroyPla
     // Return the result
     jint jniResult = (jint)jniResult_native;
     return jniResult;
+    */
+        return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
