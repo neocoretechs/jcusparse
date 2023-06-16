@@ -1752,6 +1752,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrNative(JNIEnv
     jint jniResult = (jint)jniResult_native;
     return jniResult;
     */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseDgthrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -1943,6 +1944,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrNative(JNIEnv
     jint jniResult = (jint)jniResult_native;
     return jniResult;
     */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSgthrzNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject y, jobject xVal, jobject xInd, jint idxBase)
@@ -2198,6 +2200,7 @@ JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseZgthrzNative(JNIEn
     jint jniResult = (jint)jniResult_native;
     return jniResult;
     */
+    return JCUSPARSE_STATUS_INTERNAL_ERROR;
 }
 
 JNIEXPORT jint JNICALL Java_jcuda_jcusparse_JCusparse_cusparseSsctrNative(JNIEnv *env, jclass cls, jobject handle, jint nnz, jobject xVal, jobject xInd, jobject y, jint idxBase)
